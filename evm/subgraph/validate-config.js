@@ -18,12 +18,12 @@ function validateConfig(configPath) {
   config.instances.forEach((instance, index) => {
     if (instance.address.toLowerCase() === PLACEHOLDER_ADDRESS) {
       errors.push(
-        `Instance ${index + 1} (${instance.abi}): Address is placeholder ${PLACEHOLDER_ADDRESS}`
+        `Instance ${index + 1} (${instance.abi}): Address is placeholder ${PLACEHOLDER_ADDRESS}`,
       );
     }
     if (instance.startBlock === PLACEHOLDER_START_BLOCK) {
       errors.push(
-        `Instance ${index + 1} (${instance.abi}): Start block is placeholder ${PLACEHOLDER_START_BLOCK}`
+        `Instance ${index + 1} (${instance.abi}): Start block is placeholder ${PLACEHOLDER_START_BLOCK}`,
       );
     }
   });
@@ -31,7 +31,9 @@ function validateConfig(configPath) {
   if (errors.length > 0) {
     console.error(`❌ Validation failed for ${configPath}:`);
     errors.forEach((error) => console.error(`  - ${error}`));
-    console.error('\nPlease deploy the contracts and update the configuration with real addresses and start blocks.');
+    console.error(
+      '\nPlease deploy the contracts and update the configuration with real addresses and start blocks.',
+    );
     process.exit(1);
   }
 
@@ -41,7 +43,8 @@ function validateConfig(configPath) {
 
 // Validate all network configs
 const networksDir = path.join(__dirname);
-const networkDirs = fs.readdirSync(networksDir, { withFileTypes: true })
+const networkDirs = fs
+  .readdirSync(networksDir, { withFileTypes: true })
   .filter((dirent) => dirent.isDirectory())
   .map((dirent) => dirent.name);
 

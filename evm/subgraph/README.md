@@ -36,6 +36,7 @@ npm run deploy:horizen-testnet
 ```
 
 The deployment script will:
+
 - Deploy all 5 contracts (ERC5564Announcer, ERC6538Registry, WraithSender, WraithNames, WraithWithdrawer)
 - Capture the deployment block number
 - Automatically update `subgraph/horizen-testnet/instant-config.json` with the real addresses and start block
@@ -50,6 +51,7 @@ npm run validate-subgraph
 ```
 
 This script checks that:
+
 - No contract address is set to `0x000000000000000000000000000000000000dead`
 - No start block is set to `0`
 
@@ -88,7 +90,7 @@ To add support for a new EVM network:
          "address": "0x000000000000000000000000000000000000dead",
          "chain": "<network>",
          "startBlock": 0
-       },
+       }
        // ... repeat for all contracts
      ]
    }

@@ -45,10 +45,10 @@ async function main() {
   // Update subgraph config
   const network = hre.network.name;
   const configPath = path.join(__dirname, '../subgraph', network, 'instant-config.json');
-  
+
   if (fs.existsSync(configPath)) {
     const config = JSON.parse(fs.readFileSync(configPath, 'utf8'));
-    
+
     const addressMap: Record<string, string> = {
       ERC5564Announcer: announcerAddress,
       ERC6538Registry: registryAddress,
