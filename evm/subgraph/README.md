@@ -105,3 +105,11 @@ To add support for a new EVM network:
 | Network         | Subgraph URL                                                                                                              |
 | --------------- | ------------------------------------------------------------------------------------------------------------------------- |
 | Horizen Testnet | `https://api.goldsky.com/api/public/project_cmhp1xyw0qu8901xcdayke69d/subgraphs/wraith-protocol-horizen-testnet/1.0.0/gn` |
+
+## Deployment Status
+
+### Horizen Testnet
+- **Deployed**: ERC5564Announcer, ERC6538Registry
+- **Not yet deployed**: WraithNames, WraithSender, WraithWithdrawer
+
+The subgraph currently only indexes the deployed contracts. To add support for WraithNames, WraithSender, and WraithWithdrawer, deploy these contracts to Horizen Testnet and update the subgraph configuration following the redeployment process above.
