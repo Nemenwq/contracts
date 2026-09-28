@@ -109,6 +109,7 @@ To add support for a new EVM network:
 ## Deployment Status
 
 ### Horizen Testnet
+
 - **Deployed**: ERC5564Announcer, ERC6538Registry
 - **Not yet deployed**: WraithNames, WraithSender, WraithWithdrawer
 
